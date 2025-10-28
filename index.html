@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style1.css">
   <title>حملة نحو حرم جامعي أخضر</title>
+  <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
+  <div class="top-bar">
+    <button id="lang-switch">English</button>
+  </div>
+
+  <div class="top-imag">
+      <img src="images/logo.jpg" alt="شعار الجامعة" class="logo-img">
+  </div>
+
   <header>
-    <div class="top-bar">
-      <button id="lang-switch">English</button>
-    </div>
-    <h1 id="logo">نحو حرم جامعي أخضر</h1>
+    <div class="logo-container">
+      <h1 id="logo">نحو حرم جامعي أخضر</h1>
+        </div>
+
     <div class="buttons">
       <button data-target="about" id="btn-about">عن الحملة</button>
       <button data-target="goals" id="btn-goals">أهداف الحملة</button>
@@ -72,8 +80,6 @@
 
   <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop autoplay></audio>
   <button id="music-toggle">🔊</button>
-
   <script src="js/script.js"></script>
-
 </body>
 </html>

@@ -1,4 +1,4 @@
-body {
+ body {
       margin: 0;
       font-family: 'Tajawal', Arial, sans-serif;
       background: linear-gradient(180deg, #e8f9f1, #f3f9ff);
@@ -6,48 +6,68 @@ body {
       scroll-behavior: smooth;
     }
 
+    /* شريط أعلى الموقع */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(90deg, #00a86b, #0033ea);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .top-bar button {
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      background-color: #fff;
+      color: #00796b;
+      cursor: pointer;
+    }
+
     header {
+      margin-top: 40px; /* لتجنب الشريط العلوي */
       text-align: center;
       background: linear-gradient(90deg, #00a86b, #0091ea);
       color: white;
-      padding: 60px 20px;
-      position: relative;
+      padding: 20px 10px 40px 10px;
+    }
+
+    /* حاوية الشعار */
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 20px;
+    }
+
+    .logo-img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 30px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.1);
     }
 
     header h1#logo {
-      font-size: 40px;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% {opacity: 0; transform: translateY(-20px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
-
-    header .top-bar {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    header button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background-color: #fff;
-      color: #00a86b;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    header button:hover {
-      background-color: #f0f0f0;
+      font-size: 36px;
+      margin: 0;
     }
 
     header .buttons {
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     header .buttons button {
@@ -139,9 +159,29 @@ body {
     #music-toggle:hover {
       background-color: #007f5c;
     }
+
     @media (max-width: 600px) {
-  header h1#logo { font-size: 28px; }
-  header .buttons button { padding: 10px 15px; font-size: 14px; }
-  main section { padding: 40px 5%; }
-  .content-box { padding: 15px 20px; }
+      header h1#logo { font-size: 28px; }
+      header .buttons button { padding: 10px 15px; font-size: 14px; }
+      main section { padding: 40px 5%; }
+      .content-box { padding: 15px 20px; }
+    }
+    .top-imag {
+  position: fixed; /* لجعل الصورة ثابتة أسفل الشريط */
+  top: 40px; /* أسفل الشريط العلوي مباشرة */
+  left: 0; /* على اليسار */
+  padding: 10px;
+  z-index: 998; /* أقل من الشريط لكن أعلى من المحتوى */
+}
+
+.top-imag .logo-img {
+  width: 150px; /* حجم أصغر إذا أحببت */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 50px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.top-imag .logo-img:hover {
+  transform: scale(1.1);
 }
