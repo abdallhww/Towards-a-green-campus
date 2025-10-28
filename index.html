@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style1.css">
   <title>حملة نحو حرم جامعي أخضر</title>
-  <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
   <header>
@@ -13,50 +13,60 @@
     </div>
     <h1 id="logo">نحو حرم جامعي أخضر</h1>
     <div class="buttons">
-      <button data-target="about">عن الحملة</button>
-      <button data-target="goals">أهداف الحملة</button>
-      <button data-target="how">كيف تعمل السلات</button>
-      <button data-target="points">نظام النقاط</button>
-      <button data-target="monitoring">المراقبة</button>
+      <button data-target="about" id="btn-about">عن الحملة</button>
+      <button data-target="goals" id="btn-goals">أهداف الحملة</button>
+      <button data-target="how" id="btn-how">كيف تعمل السلات</button>
+      <button data-target="points" id="btn-points">نظام النقاط</button>
+      <button data-target="monitoring" id="btn-monitoring">المراقبة</button>
     </div>
   </header>
 
   <main>
     <section id="about">
       <h2 id="about-h2">نبذة عن الحملة</h2>
-      <p id="about-p">تهدف حملة "نحو حرم جامعي أخضر" إلى تعزيز الوعي البيئي بين الطلاب من خلال نظام سلات ذكية لفرز النفايات.</p>
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/09/08/recycling-1867419_1280.jpg" alt="فرز النفايات">
-      <button class="back-top">🔝 رجوع للأعلى</button>
+      <div class="content-box">
+        <p id="about-p">تهدف حملة "نحو حرم جامعي أخضر" إلى تعزيز الوعي البيئي بين الطلاب من خلال نظام سلات ذكية لفرز النفايات.</p>
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/08/recycling-1867419_1280.jpg" alt="فرز النفايات">
+        <button class="back-top">🔝 رجوع للأعلى</button>
+      </div>
     </section>
 
     <section id="goals">
       <h2 id="goals-h2">أهداف الحملة</h2>
-      <p id="goals-p">• نشر ثقافة الاستدامة داخل الحرم الجامعي.<br>
-         • تشجيع الطلاب على فرز النفايات.<br>
-         • تقليل كمية النفايات غير المفروزة.</p>
-      <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/recycling-1835640_1280.jpg" alt="أهداف بيئية">
-      <button class="back-top">🔝 رجوع للأعلى</button>
+      <div class="content-box">
+        <p id="goals-p">• نشر ثقافة الاستدامة داخل الحرم الجامعي.<br>
+        • تشجيع الطلاب على فرز النفايات.<br>
+        • تقليل كمية النفايات غير المفروزة.</p>
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/recycling-1835640_1280.jpg" alt="أهداف بيئية">
+        <button class="back-top">🔝 رجوع للأعلى</button>
+      </div>
     </section>
 
     <section id="how">
       <h2 id="how-h2">كيف تعمل السلات الذكية؟</h2>
-      <p id="how-p">تفتح السلة باستخدام البطاقة الجامعية، ويُحسب الوزن داخل السلة ليضاف إلى رصيد الطالب كنقاط.</p>
-      <img src="https://cdn.pixabay.com/photo/2020/04/04/15/36/smart-bin-5004444_1280.jpg" alt="سلة ذكية">
-      <button class="back-top">🔝 رجوع للأعلى</button>
+      <div class="content-box">
+        <p id="how-p">تفتح السلة باستخدام البطاقة الجامعية، ويُحسب الوزن داخل السلة ليضاف إلى رصيد الطالب كنقاط.</p>
+        <img src="https://cdn.pixabay.com/photo/2020/04/04/15/36/smart-bin-5004444_1280.jpg" alt="سلة ذكية">
+        <button class="back-top">🔝 رجوع للأعلى</button>
+      </div>
     </section>
 
     <section id="points">
       <h2 id="points-h2">نظام النقاط والمكافآت</h2>
-      <p id="points-p">يمكن للطالب استبدال النقاط بمكافآت مثل وجبات كافتيريا، استعارة كتب أو بطاقات خصم في متجر الجامعة.</p>
-      <img src="https://cdn.pixabay.com/photo/2017/06/10/07/22/gift-2389333_1280.jpg" alt="مكافآت">
-      <button class="back-top">🔝 رجوع للأعلى</button>
+      <div class="content-box">
+        <p id="points-p">يمكن للطالب استبدال النقاط بمكافآت مثل وجبات كافتيريا، استعارة كتب أو بطاقات خصم في متجر الجامعة.</p>
+        <img src="https://cdn.pixabay.com/photo/2017/06/10/07/22/gift-2389333_1280.jpg" alt="مكافآت">
+        <button class="back-top">🔝 رجوع للأعلى</button>
+      </div>
     </section>
 
     <section id="monitoring">
       <h2 id="monitoring-h2">المراقبة والعقوبات</h2>
-      <p id="monitoring-p">توجد كاميرات مراقبة على السلات لضمان الاستخدام السليم، مع فرض عقوبات على المخالفين.</p>
-      <img src="https://cdn.pixabay.com/photo/2015/12/08/00/26/security-1081738_1280.jpg" alt="كاميرات مراقبة">
-      <button class="back-top">🔝 رجوع للأعلى</button>
+      <div class="content-box">
+        <p id="monitoring-p">توجد كاميرات مراقبة على السلات لضمان الاستخدام السليم، مع فرض عقوبات على المخالفين.</p>
+        <img src="https://cdn.pixabay.com/photo/2015/12/08/00/26/security-1081738_1280.jpg" alt="كاميرات مراقبة">
+        <button class="back-top">🔝 رجوع للأعلى</button>
+      </div>
     </section>
   </main>
 
@@ -64,5 +74,6 @@
   <button id="music-toggle">🔊</button>
 
   <script src="js/script.js"></script>
+
 </body>
 </html>
