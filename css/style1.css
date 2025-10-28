@@ -1,189 +1,175 @@
- body {
-      margin: 0;
-      font-family: 'Tajawal', Arial, sans-serif;
-      background: linear-gradient(180deg, #e8f9f1, #f3f9ff);
-      color: #053c2f;
-      scroll-behavior: smooth;
-    }
+/* ---------------------------- */
+/* قاعدة أساسية للجسم والخلفية */
+body {
+  margin: 0;
+  font-family: 'Tajawal', Arial, sans-serif;
+  background: linear-gradient(180deg, #e8f9f1, #f3f9ff);
+  color: #053c2f;
+  scroll-behavior: smooth;
+}
 
-    /* شريط أعلى الموقع */
-    .top-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      background: linear-gradient(90deg, #00a86b, #0033ea);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
+/* ---------------------------- */
+/* شريط أعلى الموقع */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, #00a86b, #0033ea);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
-    .top-bar button {
-      padding: 5px 10px;
-      font-size: 14px;
-      border-radius: 5px;
-      border: none;
-      background-color: #fff;
-      color: #00796b;
-      cursor: pointer;
-    }
+.top-bar button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  color: #00796b;
+  cursor: pointer;
+}
 
-    header {
-      margin-top: 40px; /* لتجنب الشريط العلوي */
-      text-align: center;
-      background: linear-gradient(90deg, #00a86b, #0091ea);
-      color: white;
-      padding: 20px 10px 40px 10px;
-    }
+/* ---------------------------- */
+/* الهيدر */
+header {
+  margin-top: 40px; /* لتجنب الشريط العلوي */
+  text-align: center;
+  background: linear-gradient(90deg, #00a86b, #0091ea);
+  color: white;
+  padding: 20px 10px 40px 10px;
+}
 
-    /* حاوية الشعار */
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      padding: 10px 20px;
-    }
+/* حاوية شعار داخل الهيدر */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
 
-    .logo-img {
-      width: 100px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 30px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
+header h1#logo {
+  font-size: 36px;
+  margin: 0;
+}
 
-    .logo-img:hover {
-      transform: scale(1.1);
-    }
+header .buttons {
+  margin-top: 20px;
+}
 
-    header h1#logo {
-      font-size: 36px;
-      margin: 0;
-    }
+header .buttons button {
+  margin: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #00796b;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    header .buttons {
-      margin-top: 20px;
-    }
+header .buttons button:hover {
+  background-color: #f0f0f0;
+}
 
-    header .buttons button {
-      margin: 5px;
-      padding: 12px 25px;
-      font-size: 16px;
-      background-color: #fff;
-      color: #00796b;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+/* ---------------------------- */
+/* الأقسام الرئيسية */
+main section {
+  padding: 60px 10%;
+  text-align: center;
+}
 
-    header .buttons button:hover {
-      background-color: #f0f0f0;
-    }
+main section h2 {
+  font-size: 28px;
+  color: #00796b;
+  margin-bottom: 20px;
+}
 
-    main section {
-      padding: 60px 10%;
-      text-align: center;
-    }
+/* محتوى الصندوق */
+.content-box {
+  background: linear-gradient(135deg, #ffffff, #e0f7f1);
+  padding: 20px 25px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    main section h2 {
-      font-size: 28px;
-      color: #00796b;
-      margin-bottom: 20px;
-    }
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
 
-    .content-box {
-      background: linear-gradient(135deg, #ffffff, #e0f7f1);
-      padding: 20px 25px;
-      margin: 20px auto;
-      max-width: 800px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.content-box p {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #053c2f;
+}
 
-    .content-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    }
+.content-box img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
 
-    .content-box p {
-      margin: 0 0 15px 0;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #053c2f;
-    }
+.content-box .back-top {
+  padding: 10px 20px;
+  background-color: #00a86b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    .content-box img {
-      max-width: 100%;
-      border-radius: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
+.content-box .back-top:hover {
+  background-color: #007f5c;
+}
 
-    .content-box .back-top {
-      padding: 10px 20px;
-      background-color: #00a86b;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+/* ---------------------------- */
+/* زر تشغيل الموسيقى */
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00a86b;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
-    .content-box .back-top:hover {
-      background-color: #007f5c;
-    }
+#music-toggle:hover {
+  background-color: #007f5c;
+}
 
-    #music-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #00a86b;
-      border: none;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: 0.3s;
-    }
-
-    #music-toggle:hover {
-      background-color: #007f5c;
-    }
-
-    @media (max-width: 600px) {
-      header h1#logo { font-size: 28px; }
-      header .buttons button { padding: 10px 15px; font-size: 14px; }
-      main section { padding: 40px 5%; }
-      .content-box { padding: 15px 20px; }
-      .top-imag .logo-img {
-    width: 100px; /* جعل الشعار أصغر */
-    top: 50px; /* زيادة المسافة من أعلى الشاشة */
-  }
-
-  header {
-    padding-top: 80px; /* زيادة المسافة العلوية للرأس لتجنب التداخل مع الشعار */
-  }
-    }
-    .top-imag {
-  position: fixed; /* لجعل الصورة ثابتة أسفل الشريط */
-  top: 40px; /* أسفل الشريط العلوي مباشرة */
-  left: 0; /* على اليسار */
+/* ---------------------------- */
+/* الشعار الثابت أعلى الصفحة */
+.top-imag {
+  position: fixed;
+  top: 40px; /* أسفل الشريط مباشرة */
+  left: 0;
   padding: 10px;
-  z-index: 998; /* أقل من الشريط لكن أعلى من المحتوى */
+  z-index: 998;
 }
 
 .top-imag .logo-img {
-  width: 150px; /* حجم أصغر إذا أحببت */
+  width: 150px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 50px 10px rgba(0,0,0,0.2);
@@ -192,4 +178,37 @@
 
 .top-imag .logo-img:hover {
   transform: scale(1.1);
+}
+
+/* ---------------------------- */
+/* تأثيرات عند تحريك الماوس على الشعار داخل الهيدر */
+.logo-img {
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------- */
+/* التصميم المتجاوب */
+@media (max-width: 600px) {
+
+  header h1#logo { font-size: 28px; }
+
+  header .buttons button { padding: 10px 15px; font-size: 14px; }
+
+  main section { padding: 40px 5%; }
+
+  .content-box { padding: 15px 20px; }
+
+  /* الشعار على الهواتف */
+  .top-imag .logo-img {
+    width: 80px;   /* تصغير الشعار */
+    top: 60px;     /* رفع الشعار لتجنب التداخل */
+  }
+
+  header {
+    padding-top: 140px; /* زيادة المسافة العلوية للهيدر */
+  }
 }
