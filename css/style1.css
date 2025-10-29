@@ -94,6 +94,7 @@ main section h2 {
 
 /* محتوى الصندوق */
 .content-box {
+  
   background: linear-gradient(135deg, #ffffff, #e0f7f1);
   padding: 20px 25px;
   margin: 20px auto;
@@ -159,20 +160,19 @@ main section h2 {
 }
 
 /* ---------------------------- */
-/* الشعار الثابت أعلى الصفحة */
+/* الصورة الأولى */
 .top-imag {
   position: fixed;
-  top: 40px; /* أسفل الشريط مباشرة */
-  left: 0;
-  padding: 10px;
-  z-index: 998;
+  top: 50px;       /* أسفل الشريط العلوي قليلاً */
+  left: 10px;      /* على أقصى اليسار */
+  z-index: 999;    /* أعلى من باقي العناصر */
 }
 
 .top-imag .logo-img {
-  width: 150px;
+  width: 140px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 50px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s;
 }
 
@@ -180,15 +180,26 @@ main section h2 {
   transform: scale(1.1);
 }
 
-/* ---------------------------- */
-/* تأثيرات عند تحريك الماوس على الشعار داخل الهيدر */
-.logo-img {
+/* الصورة الثانية */
+.top-imaga {
+  position: fixed;
+  top: 50px;       /* نفس ارتفاع الأولى */
+  right: 10px;     /* على أقصى اليمين */
+  z-index: 999;    /* تبقى فوق المحتوى */
+}
+
+.top-imaga .logo-imga {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s;
 }
 
-.logo-img:hover {
+.top-imaga .logo-imga:hover {
   transform: scale(1.1);
 }
+
 
 /* ---------------------------- */
 /* التصميم المتجاوب */
@@ -210,5 +221,285 @@ main section h2 {
 
   header {
     padding-top: 140px; /* زيادة المسافة العلوية للهيدر */
+  }
+  @media (max-width: 600px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  header h1#logo {
+    font-size: 24px;
+  }
+
+  .content-box {
+    padding: 10px 15px;
+    margin: 10px;
+  }
+
+  .bins-container {
+    flex-direction: column; /* يخلي السلات تحت بعض */
+    align-items: center;
+  }
+
+  .bin-card {
+    width: 90%;
+  }
+
+  .logo-imga1, .logo-imga2, .logo-imga3, 
+  .logo-imga4, .logo-imga5, .logo-imga6 ,.logo-imga{
+    width: 80px; /* تصغير الصور قليلاً */
+  }
+
+  .top-bar button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  #music-toggle {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 12px;
+  }
+}
+
+}
+/* تصميم قسم السلات الثلاث */
+.bins-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.bin-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  perspective: 1000px;
+}
+
+.bin-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.bin-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.bin-card p {
+  font-size: 0.95em;
+  color: #054a2f;
+  line-height: 1.6;
+}
+
+/* تأثير ثلاثي الأبعاد */
+.bin-card:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.bin-card:hover img {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+}
+
+/* ألوان مخصصة لكل سلة */
+.green-bin {
+  border-top: 5px solid #3bb44a;
+}
+
+.yellow-bin {
+  border-top: 5px solid #f7c948;
+}
+
+.blue-bin {
+  border-top: 5px solid #3087ff;
+}
+
+/* النص الختامي */
+.bins-summary {
+  margin-top: 30px;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #053c2f;
+}
+
+
+/* الصورة الأولى */
+.top-imaga1 {
+  position: relative;
+  display: flex;
+  justify-content: center; /* وسط */
+  margin-bottom: 20px;
+}
+.logo-imga1 {
+  width: 130px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.logo-imga1:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* الصورة الثانية */
+.top-imaga2 {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* يسار */
+  margin-bottom: 20px;
+}
+.logo-imga2 {
+  width: 120px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.logo-imga2:hover {
+  transform: scale(1.1);
+}
+
+/* الصورة الثالثة */
+.top-imaga3 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* يمين */
+  margin-bottom: 20px;
+}
+.logo-imga3 {
+  width: 140px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.logo-imga3:hover {
+  transform: scale(1.1);
+}
+
+/* الصورة الرابعة */
+.top-imaga4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.logo-imga4 {
+  width: 110px;
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.logo-imga4:hover {
+  transform: scale(1.15);
+}
+
+/* الصورة الخامسة */
+.top-imaga5 {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+.logo-imga5 {
+  width: 125px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+.logo-imga5:hover {
+  transform: scale(1.1);
+}
+
+/* الصورة السادسة */
+.top-imaga6 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+.logo-imga6 {
+  width: 130px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+.logo-imga6:hover {
+  transform: scale(1.1);
+}
+/* ✅ تصحيح وتحديث تصميم السلات لتكون متجاوبة بالكامل */
+.bins-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.bin-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bin-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.6s ease;
+}
+
+.bin-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ استجابة للأجهزة الصغيرة */
+@media (max-width: 900px) {
+  .bins-container {
+    gap: 20px;
+  }
+
+  .bin-card {
+    width: 45%; /* كل كرتين في صف واحد */
+  }
+}
+
+@media (max-width: 600px) {
+  .bins-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .bin-card {
+    width: 90%; /* كل سلة تأخذ عرض الشاشة تقريباً */
+  }
+
+  .bin-card img {
+    width: 100px;
+    height: 100px;
   }
 }
