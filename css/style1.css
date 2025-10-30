@@ -361,7 +361,7 @@ main section h2 {
 .top-imaga2 {
   position: relative;
   display: flex;
-  justify-content: flex-start; /* يسار */
+  justify-content: center; /* يسار */
   margin-bottom: 20px;
 }
 .logo-imga2 {
@@ -378,7 +378,7 @@ main section h2 {
 .top-imaga3 {
   position: relative;
   display: flex;
-  justify-content: flex-end; /* يمين */
+  justify-content: center; /* يمين */
   margin-bottom: 20px;
 }
 .logo-imga3 {
@@ -412,7 +412,7 @@ main section h2 {
 .top-imaga5 {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 25px;
 }
 .logo-imga5 {
@@ -429,7 +429,7 @@ main section h2 {
 .top-imaga6 {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 25px;
 }
 .logo-imga6 {
